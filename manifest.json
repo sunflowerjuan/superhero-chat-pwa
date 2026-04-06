@@ -1,13 +1,13 @@
 {
   "name": "Chat para Superheroes",
   "short_name": "HeroChat",
-  "description": "Aplicación PWA de chat para superhéroes del universo Marvel",
+  "description": "Aplicacion PWA de chat para superheroes del universo Marvel",
   "author": "sunflowers_juan - UPTC",
   "version": "1.0.0",
   "lang": "es-CO",
   "dir": "ltr",
-  "start_url": "./index.html?utm_source=homescreen",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "id": "chat-superheroes-pwa",
   "background_color": "#3498db",
   "theme_color": "#2980b9",
@@ -21,14 +21,14 @@
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Vista móvil de Chat para héroes"
+      "label": "Vista movil de Chat para heroes"
     },
     {
       "src": "img/screenshot-desktop.png",
       "sizes": "1920x1080",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Vista escritorio de Chat para héroes"
+      "label": "Vista escritorio de Chat para heroes"
     }
   ],
   "icons": [
@@ -81,41 +81,5 @@
       "purpose": "any maskable"
     }
   ],
-  "shortcuts": [
-    {
-      "name": "Nuevo Mensaje",
-      "short_name": "Mensaje",
-      "description": "Abrir la pantalla para crear un nuevo mensaje",
-      "url": "./index.html?action=new_message",
-      "icons": [
-        {
-          "src": "img/icons/icon-96x96.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    }
-  ],
-  "share_target": {
-    "action": "/share-target/",
-    "method": "GET",
-    "params": { "title": "title", "text": "text", "url": "url" }
-  },
-  "protocol_handlers": [
-    { "protocol": "web+herochat", "url": "/index.html?message=%s" }
-  ],
-  "related_applications": [],
-  "display_override": ["standalone", "minimal-ui", "browser"],
-  "handle_links": "preferred",
-  "launch_handler": { "client_mode": "navigate-existing" },
-
-  "file_handlers": [
-    {
-      "action": "/open-file",
-      "accept": { "image/*": [".jpg", ".png", ".gif"] }
-    }
-  ],
-  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
-  "serviceworker": { "src": "./sw.js", "scope": "/" },
-  "edge_side_panel": { "preferred_width": 400 }
+  "related_applications": []
 }
